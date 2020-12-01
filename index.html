@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> Eco System Monitering System</title>
+        <title> Eco System Monitoring System</title>
         <style>
             body{
                 background-color: rgb(185, 243, 109);
@@ -11,9 +11,7 @@
                 text-align: center;
             }
 
-            p{
-                text-align: center;
-            }
+           
             @keyframes mymove {
                 from {background-color: red;}
                 to {background-color: yellow;}
@@ -53,11 +51,11 @@
                     }
                     else{
                         if (z<16)
-                        document.getElementById(di).innerHTML+=" degree celcius is the current value and it is considered low.";
+                        document.getElementById(di).innerHTML+=" degree celsius is the current value and it is considered low.";
                         else if (z>16 && z<24)
-                        document.getElementById(di).innerHTML+=" degree celcius is the current value and it is considered moderate.";
+                        document.getElementById(di).innerHTML+=" degree celsius is the current value and it is considered moderate.";
                         else
-                        document.getElementById(di).innerHTML+=" degree celcius is the current value and it is considered high.";
+                        document.getElementById(di).innerHTML+=" degree celsius is the current value and it is considered high.";
                     }
                 
                 }
@@ -92,10 +90,15 @@
                     var z=a/k;
                     if (z<40)
                         document.getElementById(di).innerHTML+=" % is the current value and it is considered dry.";
-                        else if (z>40 && z<65)
+                        else if (z>40 && z<65){
                         document.getElementById(di).innerHTML+=" % is the current value and it is considered moderate.";
-                        else
+                        document.getElementById('abc').innerHTML+="<h4>Remedies</h4><ol><li>Use a dehumidifier</li><li>Actively use your ventilation</li><li>Use rock salt over the area</li></ol>";
+
+                        }
+                        else{
                         document.getElementById(di).innerHTML+=" % is the current value and it is considered humid.";
+                        document.getElementById('abc').innerHTML+='<h4>Remedies</h4><ol><li>Use a dehumidifier</li><li>Actively use your ventilation</li><li>Use rock salt over the area</li></ol>';
+                        }
                 }
                 else{
                    // document.getElementById("root").innerHTML = "error";
@@ -110,7 +113,7 @@
 }, 15000);
         </script>
 
-        <h1>Ecosystem Monitering and Assessment System</h1>
+        <h1>Ecosystem Monitoring and Assessment System</h1>
         <br>
         <div id ='root'>
             <div class="standard">
@@ -136,6 +139,9 @@
                 <h2>Humidity Data</h2>
                 <p id='humi'>
 
+                </p>
+                <p id='abc'>
+                    
                 </p>
             </div>
             <br>
